@@ -1,0 +1,9 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'style/style.css' %}">
+<h2>Edit Medicine</h2>
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Update</button>
+</form>
+<a href="{% url 'list' %}">Back</a>
