@@ -1,9 +1,16 @@
-{% load static %}
-<link rel="stylesheet" href="{% static 'style/style.css' %}">
-<h2>Add Medicine</h2>
-<form method="POST">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Add</button>
-</form>
-<a href="{% url 'list' %}">Back</a>
+{% extends 'base.html' %}
+{% block title %}Add Medicine{% endblock %}
+
+{% block content %}
+<div class="card shadow">
+  <div class="card-body">
+    <h3>Add Medicine</h3>
+    <form method="POST">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button class="btn btn-success">Save</button>
+      <a href="{% url 'list' %}" class="btn btn-secondary">Back</a>
+    </form>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<div class="p-5 text-center bg-success text-white rounded">
+    <h1 class="display-4 fw-bold">Manage Your Medicine Inventory</h1>
+    <p class="lead">Track stock, add medicines, search and edit – all in one place</p>
+    <a href="{% url 'signup' %}" class="btn btn-light btn-lg mt-3">Start Now</a>
+</div>
+
+<div class="row text-center mt-5">
+  <div class="col-md-4">
+    <h4>➕ Add Medicines</h4>
+    <p>Store medicine names with available stock.</p>
+  </div>
+  <div class="col-md-4">
+    <h4>📋 View List</h4>
+    <p>Pagination + Search + Manage items.</p>
+  </div>
+  <div class="col-md-4">
+    <h4>✏ Edit or Delete</h4>
+    <p>Fix mistakes or remove items easily.</p>
+  </div>
+</div>
+{% endblock %}

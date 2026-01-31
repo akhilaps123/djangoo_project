@@ -8,6 +8,10 @@ from .models import Medicine
 
 
 
+def home(request):
+    return render(request,'home.html')
+
+
 
 def signup_view(request):
     form = SignupForm()
@@ -77,6 +81,9 @@ def delete_medicine(request,id):
 def logout_view(request):
     logout(request)
     return redirect('login')
+
+
+
 
 
 
